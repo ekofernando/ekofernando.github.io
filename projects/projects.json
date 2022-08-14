@@ -1,0 +1,96 @@
+[
+  {
+    "name": "ERP Applications",
+    "desc": "Build ERP Applications for PT. Bukit Baja Nusantara Using Codeigiter, Javascript, Bootsrap.",
+    "image": "bbn",
+    "category": "basicweb",
+    "links": {
+      "view": "#",
+      "code": "#"
+    }
+  },
+  {
+    "name": "ERP Applications",
+    "desc": "Build ERP Applications for PT. Megasetia and PT.Appollo Agung Using PHP Grid, Javascript, Bootsrap.",
+    "image": "bootstrapportfolio",
+    "category": "basicweb",
+    "links": {
+      "view": "#",
+      "code": "#"
+    }
+  },
+
+  {
+    "name": "WMS Applications",
+    "desc": "Build WMS Applications Using Codeigiter, Javascript, Bootsrap.",
+    "image": "wms",
+    "category": "basicweb",
+    "links": {
+      "view": "#",
+      "code": "#"
+    }
+  },
+
+  {
+    "name": "Build hybrid mobile app",
+    "desc": "Build Backend for mobile apps voucher for mall & hotels AMBARRUKMO using framework7 and apache cordova",
+    "image": "ambar",
+    "category": "basicweb",
+    "links": {
+      "view": "#",
+      "code": "#"
+    }
+  },
+
+  {
+    "name": "Build hybrid mobile app",
+    "desc": "Build Backend for mobile apps Resep Oma using framework7 and apache cordova",
+    "image": "resep",
+    "category": "basicweb",
+    "links": {
+      "view": "#",
+      "code": "#"
+    }
+  },
+
+  {
+    "name": "Website E-commerce",
+    "desc": "Build website e-commerce for LOOK BOUTIQUE STORE Using Codeigniter",
+    "image": "look",
+    "category": "basicweb",
+    "links": {
+      "view": "#",
+      "code": "#"
+    }
+  },
+  {
+    "name": "Scrapper website",
+    "desc": "Build scraping tool using nodejs, puppeteer, mysql, bootstrap",
+    "image": "srapper",
+    "category": "basicweb",
+    "links": {
+      "view": "#",
+      "code": "#"
+    }
+  },
+  {
+    "name": "Website E-commerce",
+    "desc": "Development website e-commerce for Berrybenka Using Laravel",
+    "image": "bb",
+    "category": "basicweb",
+    "links": {
+      "view": "#",
+      "code": "#"
+    }
+  },
+  {
+    "name": "Restfull API",
+    "desc": "Build Restfull API for WMS using Golang, Gorrila Mux, Postgress, Gorm",
+    "image": "go",
+    "category": "basicweb",
+    "links": {
+      "view": "#",
+      "code": "#"
+    }
+  }
+]
