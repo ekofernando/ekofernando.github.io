@@ -13256,10 +13256,6 @@ input[type="button"].btn-block {
   border-radius: 0;
 }
 
-.card.border-left-primary {
-  border-left: .25rem solid #4e73df !important;
-}
-
 .card > hr {
   margin-right: 0;
   margin-left: 0;
@@ -13605,7 +13601,7 @@ input[type="button"].btn-block {
 .badge {
   display: inline-block;
   padding: 0.25em 0.4em;
-  font-size: 60%;
+  font-size: 75%;
   font-weight: 700;
   line-height: 1;
   text-align: center;
