@@ -223,45 +223,55 @@ srtop.reveal('.experience .timeline .container', { interval: 400 });
 srtop.reveal('.contact .container', { delay: 400 });
 srtop.reveal('.contact .container .form-group', { delay: 400 });
 
-// Your web app's Firebase configuration
-var firebaseConfig = {
-    apiKey: "YOUR_API_KEY",
-    authDomain: "YOUR_PROJECT_ID.firebaseapp.com",
-    projectId: "YOUR_PROJECT_ID",
-    storageBucket: "YOUR_PROJECT_ID.appspot.com",
-    messagingSenderId: "YOUR_MESSAGING_SENDER_ID",
-    appId: "YOUR_APP_ID"
-  };
-  // Initialize Firebase
-  firebase.initializeApp(firebaseConfig);
-  var db = firebase.firestore();
-  var functions = firebase.functions();
   
   $(document).ready(function() {
-    $("#contact-form").submit(function(event) {
-      event.preventDefault();
-      var formData = {
-        name: $("input[name='name']").val(),
-        email: $("input[name='email']").val(),
-        phone: $("input[name='phone']").val(),
-        message: $("textarea[name='message']").val()
-      };
 
-      // Simpan data ke Firestore
-      db.collection("contacts").add(formData)
-        .then(function(docRef) {
-          console.log("Document written with ID: ", docRef.id);
-
-          // Panggil Firebase Function untuk mengirim email
-          var sendEmail = firebase.functions().httpsCallable('sendEmail');
-          return sendEmail(formData);
-        })
-        .then(function(result) {
-          console.log("Email sent: ", result);
-          alert("Form submitted successfully!");
-        })
-        .catch(function(error) {
-          console.error("Error adding document: ", error);
+    (function() {
+        // Masukkan Public Key dari EmailJS
+        emailjs.init("XzCtkBiS8fLpGQNp4"); 
+    })();
+    
+    const contactForm = document.getElementById('contact-form');
+    
+    if(contactForm) {
+        contactForm.addEventListener('submit', function(event) {
+            event.preventDefault();
+        
+            // Pastikan email jadi huruf kecil
+            const emailInput = contactForm.querySelector('input[name="email"]');
+            emailInput.value = emailInput.value.toLowerCase().trim();
+        
+            const btn = contactForm.querySelector('button');
+            btn.innerText = 'Sending...';
+        
+            const serviceID = 'service_jdedszf';
+            const templateID = 'template_nm3m9o7';
+        
+            emailjs.sendForm(serviceID, templateID, this)
+                .then(() => {
+                    btn.innerText = 'Submit';
+                    
+                    // Menggunakan SweetAlert2 untuk sukses
+                    Swal.fire({
+                        title: 'Berhasil!',
+                        text: 'Pesan Anda sudah terkirim ke Pak Eko.',
+                        icon: 'success',
+                        confirmButtonColor: '#2563eb',
+                        confirmButtonText: 'OK'
+                    });
+        
+                    contactForm.reset();
+                }, (err) => {
+                    btn.innerText = 'Submit';
+        
+                    // Menggunakan SweetAlert2 untuk error
+                    Swal.fire({
+                        title: 'Gagal!',
+                        text: 'Maaf, terjadi kesalahan: ' + JSON.stringify(err),
+                        icon: 'error',
+                        confirmButtonColor: '#d33',
+                    });
+                });
         });
-    });
+    }
   });
