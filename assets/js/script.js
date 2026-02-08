@@ -253,11 +253,13 @@ srtop.reveal('.contact .container .form-group', { delay: 400 });
                     
                     // Menggunakan SweetAlert2 untuk sukses
                     Swal.fire({
-                        title: 'Berhasil!',
-                        text: 'Pesan Anda sudah terkirim ke Pak Eko.',
+                        position: 'top-end', // Mengatur posisi ke kanan atas
                         icon: 'success',
-                        confirmButtonColor: '#2563eb',
-                        confirmButtonText: 'OK'
+                        title: 'Pesan Terkirim!',
+                        text: 'Terima kasih, saya akan segera menghubungi Anda.',
+                        showConfirmButton: false, // Menghilangkan tombol OK agar lebih clean
+                        timer: 3000, // Alert akan hilang otomatis dalam 3 detik
+                        toast: true, // Membuatnya terlihat seperti notifikasi kecil (toast)
                     });
         
                     contactForm.reset();
