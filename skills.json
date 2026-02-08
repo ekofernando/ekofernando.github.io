@@ -8,28 +8,40 @@
         "icon": "https://img.icons8.com/offices/48/000000/php-logo.png"
     },
     {
+        "name": "Codeigniter",
+        "icon": "https://img.icons8.com/?size=100&id=r4UrHt1gLC2t&format=png&color=000000"
+    },
+    {
         "name": "Laravel",
         "icon": "https://cdn.icon-icons.com/icons2/2699/PNG/512/laravel_logo_icon_168331.png"
     },
     {
-        "name": "Codeigniter",
-        "icon": "https://img2.pngdownload.id/20180810/gzx/kisspng-website-development-codeigniter-php-software-frame-framework-development-black-river-5b6e0eeea78168.0064487615339394386861.jpg"
+        "name": "Perl",
+        "icon": "https://img.icons8.com/?size=100&id=55311&format=png&color=000000"
     },
     {
-        "name": "ReactJS",
-        "icon": "https://img.icons8.com/external-tal-revivo-color-tal-revivo/48/000000/external-react-a-javascript-library-for-building-user-interfaces-logo-color-tal-revivo.png"
-    },
-    {
-        "name": "ExpressJS",
-        "icon": "https://img.icons8.com/fluency/48/000000/node-js.png"
+        "name": "Golang",
+        "icon": "https://cdn.icon-icons.com/icons2/2699/PNG/512/golang_logo_icon_171073.png"
     },
     {
         "name": "NodeJS",
         "icon": "https://img.icons8.com/color/48/000000/nodejs.png"
     },
     {
-        "name": "Golang",
-        "icon": "https://cdn.icon-icons.com/icons2/2699/PNG/512/golang_logo_icon_171073.png"
+        "name": "ExpressJS",
+        "icon": "https://img.icons8.com/fluency/48/000000/node-js.png"
+    },
+    {
+        "name": "VueJS",
+        "icon": "https://img.icons8.com/?size=100&id=BUnExfsRs3CW&format=png&color=000000"
+    },
+    {
+        "name": "ReactJS",
+        "icon": "https://img.icons8.com/external-tal-revivo-color-tal-revivo/48/000000/external-react-a-javascript-library-for-building-user-interfaces-logo-color-tal-revivo.png"
+    },
+    {
+        "name": "Flutter",
+        "icon": "https://img.icons8.com/?size=100&id=7I3BjCqe9rjG&format=png&color=000000"
     },
     {
         "name": "Firebase",
@@ -47,7 +59,10 @@
         "name": "HTML5",
         "icon": "https://img.icons8.com/color/48/000000/html-5--v1.png"
     },
-
+    {
+        "name": "jQuery",
+        "icon": "https://img.icons8.com/ios-filled/48/1169ae/jquery.png"
+    },
     {
         "name": "MySQL",
         "icon": "https://img.icons8.com/color/48/000000/mysql-logo.png"
@@ -57,8 +72,8 @@
         "icon": "https://img.icons8.com/color/48/000000/postgreesql.png"
     },
     {
-        "name": "jQuery",
-        "icon": "https://img.icons8.com/ios-filled/48/1169ae/jquery.png"
+        "name": "RabbitMQ",
+        "icon": "https://cdn.creazilla.com/icons/3254262/rabbitmq-icon-icon-md.png"
     },
     {
         "name": "Git VCS",
@@ -67,5 +82,9 @@
     {
         "name": "GitHub",
         "icon": "https://img.icons8.com/glyph-neue/48/ffffff/github.png"
+    },
+    {
+        "name": "Docker",
+        "icon": "https://img.icons8.com/?size=100&id=cdYUlRaag9G9&format=png&color=000000"
     }   
 ]
