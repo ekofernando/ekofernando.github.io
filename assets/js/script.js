@@ -37,23 +37,6 @@ $(document).ready(function () {
         }, 500, 'linear')
     });
 
-    // <!-- emailjs to mail contact form data -->
-    $("#contact-form").submit(function (event) {
-        emailjs.init("user_TTDmetQLYgWCLzHTDgqxm");
-
-        emailjs.sendForm('contact_service', 'template_contact', '#contact-form')
-            .then(function (response) {
-                console.log('SUCCESS!', response.status, response.text);
-                document.getElementById("contact-form").reset();
-                alert("Form Submitted Successfully");
-            }, function (error) {
-                console.log('FAILED...', error);
-                alert("Form Submission Failed! Try Again");
-            });
-        event.preventDefault();
-    });
-    // <!-- emailjs to mail contact form data -->
-
 });
 
 document.addEventListener('visibilitychange',
@@ -239,3 +222,46 @@ srtop.reveal('.experience .timeline .container', { interval: 400 });
 /* SCROLL CONTACT */
 srtop.reveal('.contact .container', { delay: 400 });
 srtop.reveal('.contact .container .form-group', { delay: 400 });
+
+// Your web app's Firebase configuration
+var firebaseConfig = {
+    apiKey: "YOUR_API_KEY",
+    authDomain: "YOUR_PROJECT_ID.firebaseapp.com",
+    projectId: "YOUR_PROJECT_ID",
+    storageBucket: "YOUR_PROJECT_ID.appspot.com",
+    messagingSenderId: "YOUR_MESSAGING_SENDER_ID",
+    appId: "YOUR_APP_ID"
+  };
+  // Initialize Firebase
+  firebase.initializeApp(firebaseConfig);
+  var db = firebase.firestore();
+  var functions = firebase.functions();
+  
+  $(document).ready(function() {
+    $("#contact-form").submit(function(event) {
+      event.preventDefault();
+      var formData = {
+        name: $("input[name='name']").val(),
+        email: $("input[name='email']").val(),
+        phone: $("input[name='phone']").val(),
+        message: $("textarea[name='message']").val()
+      };
+
+      // Simpan data ke Firestore
+      db.collection("contacts").add(formData)
+        .then(function(docRef) {
+          console.log("Document written with ID: ", docRef.id);
+
+          // Panggil Firebase Function untuk mengirim email
+          var sendEmail = firebase.functions().httpsCallable('sendEmail');
+          return sendEmail(formData);
+        })
+        .then(function(result) {
+          console.log("Email sent: ", result);
+          alert("Form submitted successfully!");
+        })
+        .catch(function(error) {
+          console.error("Error adding document: ", error);
+        });
+    });
+  });
